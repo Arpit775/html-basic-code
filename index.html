@@ -1,15 +1,688 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
+  <meta charset="UTF-8">                                               
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Tags in HTML</title>
+
+  <title>Finding Worker</title>
+
+  <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
-  <h1>Who is your favourate fruit</h1>
-  <ul>
-    <li>Apple <a href="https://media.istockphoto.com/id/184276818/photo/red-apple.jpg?s=612x612&w=0&k=20&c=NvO-bLsG0DJ_7Ii8SSVoKLurzjmV0Qi4eGfn6nW3l5w=">See an Apple</a></li>
-    <li>Mango<a href="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRf0J-W_xQ8nJ2T7SeBHdkUc68NZIE0Zb4woQ&s">See an Mango</a></li> 
-  </ul>
+
+  <!-- Navbar -->
+  <header class="header">
+    <div class="container nav">
+
+      <a href="#home" class="logo">
+        <span class="logo-box">FW</span>
+        Finding<span>Worker</span>                    
+      </a>
+
+      <nav id="nav">
+        <a href="#home">Home</a>
+        <a href="#services">Services</a>
+        <a href="#workers">Workers</a>
+        <a href="#how-it-works">How It Works</a>
+        <a href="#about">About</a>
+      </nav>
+
+      <div class="nav-buttons">
+        <button class="btn outline" id="loginBtn">Login</button>
+        <button class="btn primary" id="signupBtn">Sign Up</button>
+      </div>
+
+      <button class="menu" id="menuBtn">☰</button>
+
+    </div>
+  </header>
+
+
+  <!-- Hero -->
+  <section class="hero" id="home">
+
+    <div class="container hero-content">
+
+      <div class="hero-text">
+
+        <div class="badge">
+          ● Trusted Local Services
+        </div>
+
+        <h1>
+          Find skilled workers
+          <span>you can trust.</span>
+        </h1>
+
+        <p>
+          Connect with reliable electricians, plumbers, carpenters,
+          painters, mechanics and other skilled professionals near you.
+        </p>
+
+        <div class="search-box">
+
+          <input
+            type="text"
+            id="searchInput"
+            placeholder="What service do you need?"
+          >
+
+          <input
+            type="text"
+            id="locationInput"
+            placeholder="Your location"
+          >
+
+          <button class="btn primary" id="searchBtn">
+            Search Workers
+          </button>
+
+        </div>
+
+        <div class="popular">
+          <span>Popular:</span>
+
+          <button data-category="Electrician">Electrician</button>
+          <button data-category="Plumber">Plumber</button>
+          <button data-category="Carpenter">Carpenter</button>
+          <button data-category="Painter">Painter</button>
+        </div>
+
+      </div>
+
+
+      <div class="hero-card">
+
+        <div class="worker-preview">
+
+          <div class="verified">
+            ✓ Verified
+          </div>
+
+          <div class="avatar">
+            RK
+          </div>
+
+          <h3>Raj Kumar</h3>
+
+          <p>Professional Electrician</p>
+
+          <div class="rating">
+            ★★★★★
+            <strong>4.9</strong>
+            <small>(128 reviews)</small>
+          </div>
+
+          <div class="tags">
+            <span>Wiring</span>
+            <span>AC Repair</span>
+            <span>Installation</span>
+          </div>
+
+          <div class="worker-footer">
+
+            <div>
+              <strong>6+</strong>
+              <small>Years Experience</small>
+            </div>
+
+            <div>
+              <strong>₹350</strong>
+              <small>Starting price</small>
+            </div>
+
+            <button class="arrow" data-request="Raj Kumar">
+              →
+            </button>
+
+          </div>
+
+        </div>
+
+        <div class="floating trust">
+          🛡️
+          <div>
+            <strong>92/100</strong>
+            <small>Trust Score</small>
+          </div>
+        </div>
+
+        <div class="floating available">
+          ●
+          <div>
+            <strong>Available</strong>
+            <small>2.4 km away</small>
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+
+  </section>
+
+
+  <!-- Statistics -->
+
+  <section class="stats">
+
+    <div>
+      <strong>500+</strong>
+      <span>Skilled Workers</span>
+    </div>
+
+    <div>
+      <strong>1,200+</strong>
+      <span>Jobs Completed</span>
+    </div>
+
+    <div>
+      <strong>4.8/5</strong>
+      <span>Average Rating</span>
+    </div>
+
+    <div>
+      <strong>98%</strong>
+      <span>Happy Customers</span>
+    </div>
+
+  </section>
+
+
+  <!-- Services -->
+
+  <section class="section" id="services">
+
+    <div class="container">
+
+      <div class="section-title">
+        <span>OUR SERVICES</span>
+
+        <h2>
+          What service do you <b>need?</b>
+        </h2>
+
+        <p>
+          Choose a category and find professionals with the right skills.
+        </p>
+      </div>
+
+
+      <div class="services-grid">
+
+        <button class="service-card" data-category="Electrician">
+          <div>⚡</div>
+          <h3>Electrician</h3>
+          <p>Wiring & repairs</p>
+        </button>
+
+        <button class="service-card" data-category="Plumber">
+          <div>🔧</div>
+          <h3>Plumber</h3>
+          <p>Pipe & water work</p>
+        </button>
+
+        <button class="service-card" data-category="Carpenter">
+          <div>🪚</div>
+          <h3>Carpenter</h3>
+          <p>Furniture & woodwork</p>
+        </button>
+
+        <button class="service-card" data-category="Painter">
+          <div>🎨</div>
+          <h3>Painter</h3>
+          <p>Interior & exterior</p>
+        </button>
+
+        <button class="service-card" data-category="Mechanic">
+          <div>🔩</div>
+          <h3>Mechanic</h3>
+          <p>Vehicle repair</p>
+        </button>
+
+        <button class="service-card" data-category="Cleaner">
+          <div>🧹</div>
+          <h3>Cleaner</h3>
+          <p>Home & office</p>
+        </button>
+
+      </div>
+
+    </div>
+
+  </section>
+
+
+  <!-- Workers -->
+
+  <section class="section workers" id="workers">
+
+    <div class="container">
+
+      <div class="section-title">
+        <span>FIND PROFESSIONALS</span>
+
+        <h2>
+          Top skilled <b>workers</b>
+        </h2>
+      </div>
+
+
+      <div class="filters">
+
+        <input
+          type="text"
+          id="workerSearch"
+          placeholder="Search workers..."
+        >
+
+        <select id="categoryFilter">
+
+          <option value="All">All Services</option>
+
+          <option value="Electrician">
+            Electrician
+          </option>
+
+          <option value="Plumber">
+            Plumber
+          </option>
+
+          <option value="Carpenter">
+            Carpenter
+          </option>
+
+          <option value="Painter">
+            Painter
+          </option>
+
+          <option value="Mechanic">
+            Mechanic
+          </option>
+
+          <option value="Cleaner">
+            Cleaner
+          </option>
+
+        </select>
+
+      </div>
+
+
+      <div class="workers-grid" id="workersGrid">
+      </div>
+
+      <div class="empty" id="empty">
+        No workers found.
+      </div>
+
+    </div>
+
+  </section>
+
+
+  <!-- How it works -->
+
+  <section class="section dark" id="how-it-works">
+
+    <div class="container">
+
+      <div class="center">
+
+        <span>HOW IT WORKS</span>
+
+        <h2>
+          Find your worker in
+          <b>4 simple steps</b>
+        </h2>
+
+      </div>
+
+
+      <div class="steps">
+
+        <div class="step">
+          <strong>01</strong>
+          <div>🔎</div>
+          <h3>Search</h3>
+          <p>
+            Search for the service you need.
+          </p>
+        </div>
+
+        <div class="step">
+          <strong>02</strong>
+          <div>👤</div>
+          <h3>Compare</h3>
+          <p>
+            Compare worker profiles and ratings.
+          </p>
+        </div>
+
+        <div class="step">
+          <strong>03</strong>
+          <div>📋</div>
+          <h3>Request</h3>
+          <p>
+            Send a service request.
+          </p>
+        </div>
+
+        <div class="step">
+          <strong>04</strong>
+          <div>⭐</div>
+          <h3>Review</h3>
+          <p>
+            Rate your worker after the job.
+          </p>
+        </div>
+
+      </div>
+
+    </div>
+
+  </section>
+
+
+  <!-- About -->
+
+  <section class="section" id="about">
+
+    <div class="container about">
+
+      <div>
+
+        <span>TRUST & SAFETY</span>
+
+        <h2>
+          Reliable workers,
+          <b>clear information.</b>
+        </h2>
+
+        <p>
+          Finding Worker helps customers identify reliable professionals
+          using completed jobs, ratings, reviews and trust scores.
+        </p>
+
+        <div class="points">
+
+          <div>
+            <b>✓</b>
+            <span>
+              <strong>Verified Profiles</strong>
+              Professional worker information.
+            </span>
+          </div>
+
+          <div>
+            <b>✓</b>
+            <span>
+              <strong>Ratings & Reviews</strong>
+              Customer feedback helps build trust.
+            </span>
+          </div>
+
+          <div>
+            <b>✓</b>
+            <span>
+              <strong>Trust Score</strong>
+              Quickly identify reliable workers.
+            </span>
+          </div>
+
+        </div>
+
+      </div>
+
+
+      <div class="trust-card">
+
+        <span>WORKER RELIABILITY</span>
+
+        <div class="score">
+
+          <div class="score-circle">
+            <strong>92</strong>
+            <small>/100</small>
+          </div>
+
+          <div>
+            <h3>Excellent Trust Score</h3>
+            <p>
+              Based on jobs, response rate and reviews.
+            </p>
+          </div>
+
+        </div>
+
+        <div class="progress">
+          <span></span>
+        </div>
+
+      </div>
+
+    </div>
+
+  </section>
+
+
+  <!-- CTA -->
+
+  <section class="cta">
+
+    <div class="container">
+
+      <h2>
+        Ready to find your
+        <span>trusted worker?</span>
+      </h2>
+
+      <p>
+        Search skilled professionals and send your first service request.
+      </p>
+
+      <button class="btn primary" id="ctaSignup">
+        Create Free Account →
+      </button>
+
+    </div>
+
+  </section>
+
+
+  <!-- Footer -->
+
+  <footer>
+
+    <div class="container footer">
+
+      <div class="logo">
+        <span class="logo-box">FW</span>
+        Finding<span>Worker</span>
+      </div>
+
+      <p>
+        Connecting customers with skilled professionals.
+      </p>
+
+      <p>
+        © 2026 Finding Worker
+      </p>
+
+    </div>
+
+  </footer>
+
+
+  <!-- Login / Signup Modal -->
+
+  <div class="modal" id="authModal">
+
+    <div class="modal-box">
+
+      <button class="close" id="closeAuth">
+        ×
+      </button>
+
+      <div class="modal-logo">
+        FW
+      </div>
+
+      <h2 id="authTitle">
+        Welcome Back
+      </h2>
+
+      <p id="authDescription">
+        Login to your account.
+      </p>
+
+      <form id="authForm">
+
+        <div id="nameField" class="form-field hidden">
+
+          <label>Full Name</label>
+
+          <input
+            type="text"
+            id="name"
+            placeholder="Enter your name"
+          >
+
+        </div>
+
+        <div class="form-field">
+
+          <label>Email</label>
+
+          <input
+            type="email"
+            id="email"
+            placeholder="you@example.com"
+            required
+          >
+
+        </div>
+
+        <div class="form-field">
+
+          <label>Password</label>
+
+          <input
+            type="password"
+            id="password"
+            placeholder="Enter password"
+            required
+          >
+
+        </div>
+
+        <button class="btn primary full" type="submit">
+          <span id="authButtonText">Login</span>
+        </button>
+
+      </form>
+
+      <p class="switch">
+        <span id="switchText">
+          Don't have an account?
+        </span>
+
+        <button id="switchAuth">
+          Sign Up
+        </button>
+      </p>
+
+    </div>
+
+  </div>
+
+
+  <!-- Service Request Modal -->
+
+  <div class="modal" id="requestModal">
+
+    <div class="modal-box">
+
+      <button class="close" id="closeRequest">
+        ×
+      </button>
+
+      <div class="modal-logo">
+        FW
+      </div>
+
+      <h2>Request Service</h2>
+
+      <p id="selectedWorker">
+        Send your request.
+      </p>
+
+      <form id="requestForm">
+
+        <div class="form-field">
+
+          <label>Your Name</label>
+
+          <input
+            type="text"
+            required
+            placeholder="Enter your name"
+          >
+
+        </div>
+
+        <div class="form-field">
+
+          <label>Service</label>
+
+          <input
+            type="text"
+            required
+            placeholder="Example: Electrical repair"
+          >
+
+        </div>
+
+        <div class="form-field">
+
+          <label>Location</label>
+
+          <input
+            type="text"
+            required
+            placeholder="Enter location"
+          >
+
+        </div>
+
+        <div class="form-field">
+
+          <label>Message</label>
+
+          <textarea
+            rows="3"
+            placeholder="Describe your work..."
+          ></textarea>
+
+        </div>
+
+        <button class="btn primary full">
+          Send Request
+        </button>
+
+      </form>
+
+    </div>
+
+  </div>
+
+
+  <div class="toast" id="toast">
+  </div>
+
+
+  <script src="script.js"></script>
+
 </body>
 </html>
