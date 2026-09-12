@@ -786,6 +786,6 @@ document.addEventListener(
 );
 
 
-/* ================= INITIAL LOAD ================= */
+
 
 renderWorkers();
